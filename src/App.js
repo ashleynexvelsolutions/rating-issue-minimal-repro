@@ -1,7 +1,19 @@
+import React from 'react'
 import logo from './logo.svg';
 import './App.css';
+import {Rating} from '@ashleynexvelsolutions/rating'
+
+
 
 function App() {
+  function RatingFunction() {
+    return {
+      rating: 4,
+    }
+  }
+
+  const rating = RatingFunction()
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +29,7 @@ function App() {
         >
           Learn React
         </a>
+        <Rating rating={rating.rating} />
       </header>
     </div>
   );
